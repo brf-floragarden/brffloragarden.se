@@ -1,6 +1,10 @@
 import yaml from "js-yaml";
+import { HtmlBasePlugin } from "@11ty/eleventy";
 
 export default function (eleventyConfig) {
+  // Skriver om /länkar när sajten ligger i en undermapp (GitHub Pages testadress)
+  eleventyConfig.addPlugin(HtmlBasePlugin);
+
   // Innehåll i src/_data/*.yml redigeras av styrelsen (direkt eller via Pages CMS)
   eleventyConfig.addDataExtension("yml", (contents) => yaml.load(contents));
 
@@ -22,5 +26,6 @@ export default function (eleventyConfig) {
   return {
     dir: { input: "src", output: "_site" },
     markdownTemplateEngine: false,
+    pathPrefix: process.env.PATH_PREFIX || "/",
   };
 }
