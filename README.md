@@ -30,13 +30,14 @@ hemsidan inom ett par minuter.
 
 ## Konton
 
-Hemsidan består av tre delar. Inloggningsuppgifterna ska ligga i styrelsens
+Hemsidan består av tre delar (GitHub-kontot heter **brf-floragarden**, repot
+**brf-floragarden/brffloragarden.se**). Inloggningsuppgifterna ska ligga i styrelsens
 gemensamma lösenordsförvaring – **inte** i en vanlig fil i Dropbox.
 
 | Del | Tjänst | Vad den gör |
 |---|---|---|
 | Koden och innehållet | GitHub (föreningens konto) | Här sparas alla filer och all historik. |
-| Publicering | Cloudflare Pages (föreningens konto) | Bygger och visar sidan på brffloragarden.se, gratis. |
+| Publicering | GitHub Pages (samma konto) | Bygger och visar sidan på brffloragarden.se, gratis. Sker automatiskt vid varje sparad ändring. |
 | Domänen | *(registrar – bestäms)* | brffloragarden.se, förnyas en gång per år. |
 
 **Lämnar du styrelsen?** Se till att någon kvarvarande ledamot har inloggning till
@@ -60,4 +61,6 @@ npm run build    # bygger till _site/
 - `src/*.njk`, `src/*.md` – sidorna; `src/_includes/` – mallar
 - `.pages.yml` – vilka fält Pages CMS visar
 
-Cloudflare Pages: byggkommando `npm run build`, utdatamapp `_site`.
+Publicering: `.github/workflows/publicera.yml` bygger med `npm run build` och
+lägger upp `_site/` på GitHub Pages vid varje push till `main`. Egen domän anges
+under Settings → Pages → Custom domain.
