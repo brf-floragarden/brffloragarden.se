@@ -73,7 +73,7 @@ main { padding-bottom: 3rem; }
 .intro.med-bild { display: grid; grid-template-columns: 1fr 340px; gap: 2rem; align-items: start; }
 .intro figure { margin: .3rem 0 0; }
 .intro figure img { width: 100%; height: auto; display: block; border-radius: 4px; }
-.intro figcaption { font-size: .85rem; color: var(--dampad); margin-top: .4rem; }
+.intro figcaption { font-size: .8rem; font-style: italic; line-height: 1.4; color: var(--dampad); margin-top: .4rem; }
 @media (max-width: 720px) { .intro.med-bild { grid-template-columns: 1fr; gap: 0; } .intro figure { order: -1; } }
 main > p, .text p { max-width: 68ch; }
 .tidslinje { list-style: none; padding: 0; max-width: 68ch; }

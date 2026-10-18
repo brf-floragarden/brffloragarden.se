@@ -13,7 +13,7 @@
   <title>{% if titel and page.url != "/" %}{{ titel }} – {% endif %}{{ forening.namn }}</title>
   <meta name="description" content="{{ beskrivning or 'Bostadsrättsföreningen Floragården, Föreningsgatan 39 i Malmö.' }}">
   <link rel="icon" href="/img/logo.png">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/style.css?v={{ bygge.version }}">
 </head>
 <body>
   <header class="sidhuvud">

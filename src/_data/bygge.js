@@ -1,4 +1,8 @@
-// Uppdateras automatiskt vid varje publicering (används i sidfoten).
+// Uppdateras automatiskt vid varje publicering.
 export default function () {
-  return { ar: new Date().getFullYear() };
+  const nu = new Date();
+  return {
+    ar: nu.getFullYear(), // sidfoten
+    version: nu.getTime().toString(36), // tvingar webbläsaren att hämta ny stilmall
+  };
 }
