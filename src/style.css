@@ -70,6 +70,18 @@ main { padding-bottom: 3rem; }
 
 /* Historia */
 .overrubrik { text-transform: uppercase; letter-spacing: .15em; color: var(--dampad); font-size: .85rem; margin: 2rem 0 -1rem; }
+.omslag {
+  position: relative; overflow: hidden;
+  margin: 1.5rem 0 2rem; min-height: 380px; border-radius: 6px;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 2rem; color: #fff;
+}
+.omslag img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+.omslag::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, .7), rgba(0, 0, 0, 0) 60%); }
+.omslag div { position: relative; z-index: 1; }
+.omslag h1 { margin: 0; font-size: 2.6rem; text-shadow: 0 1px 8px rgba(0, 0, 0, .5); }
+.omslag .overrubrik { margin: 0 0 .3rem; color: rgba(255, 255, 255, .85); }
+@media (max-width: 720px) { .omslag { min-height: 260px; padding: 1.2rem; } .omslag h1 { font-size: 1.8rem; } }
 main > p, .text p { max-width: 68ch; }
 .tidslinje { list-style: none; padding: 0; max-width: 68ch; }
 .tidslinje li { padding: .6rem 0 .6rem 1.2rem; border-left: 2px solid var(--linje); position: relative; }

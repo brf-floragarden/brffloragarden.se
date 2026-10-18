@@ -3,6 +3,7 @@ layout: historia.njk
 titel: Historia
 permalink: /historia/
 rubrik: Rörsjöstadens historia
+omslag: /img/historia-omslag.jpg
 tidslinjeRubrik: Fastigheten Flora 6 – till- och ombyggnadshistoria
 handelser:
   - ar: "1897"

@@ -1,8 +1,18 @@
 ---
 layout: bas.njk
 ---
+{% if omslag %}
+<header class="omslag">
+  <img src="{{ omslag | fileUrl }}" alt="">
+  <div>
+    <p class="overrubrik">Sedan 1897</p>
+    <h1>{{ rubrik }}</h1>
+  </div>
+</header>
+{% else %}
 <p class="overrubrik">Sedan 1897</p>
 <h1>{{ rubrik }}</h1>
+{% endif %}
 
 <div class="text">
 {{ content | safe }}

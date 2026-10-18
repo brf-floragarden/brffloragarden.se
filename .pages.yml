@@ -11,6 +11,11 @@ media:
     label: Övriga filer
     input: src/filer
     output: /filer
+  - name: bilder
+    label: Bilder
+    input: src/img
+    output: /img
+    extensions: [jpg, jpeg, png, webp]
 
 content:
   - name: forening
@@ -147,6 +152,11 @@ content:
       - { name: titel, type: string, hidden: true }
       - { name: permalink, type: string, hidden: true }
       - { name: rubrik, label: Rubrik, type: string }
+      - name: omslag
+        label: Omslagsbild
+        type: image
+        description: Bilden högst upp på sidan. Lämna tom för att visa sidan utan bild.
+        options: { media: bilder }
       - { name: body, label: Inledande text om Rörsjöstaden, type: rich-text }
       - { name: tidslinjeRubrik, label: Rubrik för tidslinjen, type: string }
       - name: handelser
