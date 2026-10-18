@@ -1,23 +1,18 @@
-# Grunduppgifter om föreningen. Visas på startsidan, kontaktsidan och i sidfoten.
 namn: Brf Floragården
 fulltNamn: Bostadsrättsföreningen Floragården
 grundad: 2002
 orgnr: 769608-4438
 epost: styrelsen@brffloragarden.se
-
 postadress:
   - Bostadsrättsföreningen Floragården
   - Föreningsgatan 39A
-  - 211 50 Malmö
-
+  - 211 52 Malmö
 fakturaadress:
   - Bostadsrättsföreningen Floragården
   - Kund 6680
   - c/o SBC
   - Box 5
   - 851 02 Sundsvall
-
-# Vid akut skada: Länsförsäkringars jourtelefon
 jourtelefon:
   - 040-63 38 000
   - 020-59 00 00
