@@ -73,10 +73,12 @@ main { padding-bottom: 3rem; }
 main > p, .text p { max-width: 68ch; }
 
 /* Allmän information */
-.fakta-rutnat { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
-.fakta { background: var(--yta); border: 1px solid var(--linje); border-radius: 6px; padding: .2rem 1.2rem 1rem; }
-.fakta dl { display: grid; grid-template-columns: max-content 1fr; gap: .35rem 1rem; margin: 0; font-size: .95rem; }
-.fakta dt { color: var(--dampad); }
+.fakta-rutnat { display: grid; gap: 1.25rem; }
+.fakta { background: var(--yta); border: 1px solid var(--linje); border-radius: 6px; padding: 1rem 1.4rem .6rem; }
+.fakta h2 { margin: 0 0 .4rem; font-size: 1.25rem; }
+.fakta dl { display: grid; grid-template-columns: 13rem 1fr; margin: 0; font-size: .95rem; }
+.fakta dt, .fakta dd { padding: .45rem 0; border-top: 1px solid var(--linje); min-width: 0; overflow-wrap: break-word; }
+.fakta dt { color: var(--dampad); padding-right: 1rem; }
 .fakta dd { margin: 0; }
 
 .lista-tva { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: .6rem 1.5rem; }
@@ -110,6 +112,8 @@ main > p, .text p { max-width: 68ch; }
   h1 { font-size: 1.7rem; }
   .hero, .kontakt-rutnat { grid-template-columns: 1fr; }
   .kort-rad { grid-template-columns: 1fr; }
-  .fakta dl { grid-template-columns: 1fr; gap: 0; }
-  .fakta dd { margin-bottom: .5rem; }
+  .fakta { padding-inline: 1rem; }
+  .fakta dl { grid-template-columns: 1fr; }
+  .fakta dt { padding-bottom: 0; }
+  .fakta dd { border-top: 0; padding-top: .1rem; }
 }
