@@ -157,6 +157,10 @@ content:
         type: image
         description: Bilden högst upp på sidan. Lämna tom för att visa sidan utan bild.
         options: { media: bilder }
+      - name: omslagText
+        label: Bildtext till omslagsbilden
+        type: string
+        description: Vad bilden visar och vem som tagit den / var den kommer ifrån.
       - { name: body, label: Inledande text om Rörsjöstaden, type: rich-text }
       - { name: tidslinjeRubrik, label: Rubrik för tidslinjen, type: string }
       - name: handelser

@@ -70,9 +70,11 @@ main { padding-bottom: 3rem; }
 
 /* Historia */
 .overrubrik { text-transform: uppercase; letter-spacing: .15em; color: var(--dampad); font-size: .85rem; margin: 2rem 0 -1rem; }
+.omslag-figur { margin: 1.5rem 0 2rem; }
+.omslag-figur figcaption { font-size: .85rem; color: var(--dampad); margin-top: .4rem; }
 .omslag {
   position: relative; overflow: hidden;
-  margin: 1.5rem 0 2rem; min-height: 380px; border-radius: 6px;
+  min-height: 380px; border-radius: 6px;
   display: flex; flex-direction: column; justify-content: flex-end;
   padding: 2rem; color: #fff;
 }

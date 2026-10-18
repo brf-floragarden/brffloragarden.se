@@ -3,7 +3,8 @@ layout: historia.njk
 titel: Historia
 permalink: /historia/
 rubrik: Rörsjöstadens historia
-omslag: /img/historia-omslag.jpg
+omslag: /img/foreningsgatan-1913.jpg
+omslagText: "Föreningsgatan 1913, med synagogan till höger. Fotograf okänd, public domain (Wikimedia Commons)."
 tidslinjeRubrik: Fastigheten Flora 6 – till- och ombyggnadshistoria
 handelser:
   - ar: "1897"
