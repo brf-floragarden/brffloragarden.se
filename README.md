@@ -6,7 +6,8 @@ i styrelsen ska kunna uppdatera den**, utan att kunna programmera.
 ## Vanliga uppdateringar – så gör du
 
 Logga in på redigeringsverktyget **Pages CMS**: <https://app.pagescms.org>
-(logga in med föreningens GitHub-konto, se *Konton* nedan). Där finns allt i menyn
+(logga in med GitHub → *Continue with Google* → `styrelsen@brffloragarden.se`,
+se *Konton* nedan). Där finns allt i menyn
 till vänster. När du klickar **Spara** publiceras ändringen automatiskt på
 hemsidan inom ett par minuter.
 
@@ -28,20 +29,27 @@ hemsidan inom ett par minuter.
 - [ ] Taxeringsvärde och lån uppdaterade under *Fakta om fastigheten*
 - [ ] Nya stadgar? Ladda upp.
 
-## Konton
+## Konton – allt går via föreningens Google-konto
 
-Hemsidan består av tre delar (GitHub-kontot heter **brf-floragarden**, repot
-**brf-floragarden/brffloragarden.se**). Inloggningsuppgifterna ska ligga i styrelsens
-gemensamma lösenordsförvaring – **inte** i en vanlig fil i Dropbox.
+> **Har du tillgång till Google-kontot `styrelsen@brffloragarden.se` har du
+> tillgång till allt.**
 
-| Del | Tjänst | Vad den gör |
-|---|---|---|
-| Koden och innehållet | GitHub (föreningens konto) | Här sparas alla filer och all historik. |
-| Publicering | GitHub Pages (samma konto) | Bygger och visar sidan på brffloragarden.se, gratis. Sker automatiskt vid varje sparad ändring. |
-| Domänen | *(registrar – bestäms)* | brffloragarden.se, förnyas en gång per år. |
+Alla tjänster nedan är registrerade på `styrelsen@brffloragarden.se`, och man
+loggar in med **"Logga in med Google" / "Continue with Google"** där det finns.
+Det finns alltså bara ett lösenord att hålla reda på – Google-kontots – och
+återställningsmejl för alla tjänster hamnar i samma inkorg.
 
-**Lämnar du styrelsen?** Se till att någon kvarvarande ledamot har inloggning till
-alla tre, och att e-postadressen på kontona är föreningens, inte din privata.
+| Del | Tjänst | Logga in | Vad den gör |
+|---|---|---|---|
+| E-post och inloggning | Google | `styrelsen@brffloragarden.se` | Nyckeln till allt nedan. |
+| Koden och innehållet | GitHub, kontot **brf-floragarden** | Continue with Google | Alla filer och all historik (repot `brf-floragarden/brffloragarden.se`). |
+| Redigering | Pages CMS | Logga in med GitHub (ovan) | Formulär för att ändra innehållet. |
+| Publicering | GitHub Pages | Ingår i GitHub-kontot | Bygger och visar sidan på brffloragarden.se, gratis, automatiskt vid varje sparad ändring. |
+| Domänen | *(registrar – bestäms)* | `styrelsen@brffloragarden.se` | brffloragarden.se, förnyas en gång per år. |
+
+**Lämnar du styrelsen?** Det enda som behöver lämnas över är lösenordet till
+Google-kontot (och tvåstegsverifieringen – se till att den går till ett nummer
+eller en enhet som styrelsen har kvar, inte din privata telefon).
 
 ---
 
