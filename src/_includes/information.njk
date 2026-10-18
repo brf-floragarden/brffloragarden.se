@@ -1,0 +1,30 @@
+---
+layout: bas.njk
+---
+<h1>Allmän information om Brf Floragården</h1>
+
+<div class="fakta-rutnat">
+  {%- for grupp in fastigheten.grupper %}
+  <section class="fakta">
+    <h2>{{ grupp.rubrik }}</h2>
+    <dl>
+      {%- for rad in grupp.rader %}
+      <dt>{{ rad.etikett }}</dt><dd>{{ rad.varde }}</dd>
+      {%- endfor %}
+    </dl>
+  </section>
+  {%- endfor %}
+</div>
+
+<div class="text">
+{{ content | safe }}
+</div>
+
+<section>
+  <h2>Föreningens leverantörer</h2>
+  <ul class="lista-tva">
+    {%- for l in leverantorer %}
+    <li><strong>{{ l.namn }}</strong><span>{{ l.tjanst }}</span></li>
+    {%- endfor %}
+  </ul>
+</section>

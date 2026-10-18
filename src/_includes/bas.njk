@@ -1,0 +1,44 @@
+{%- set meny = [
+  { url: "/", titel: "Start" },
+  { url: "/historia/", titel: "Historia" },
+  { url: "/information/", titel: "Allmän information" },
+  { url: "/dokument/", titel: "Dokument" },
+  { url: "/kontakt/", titel: "Kontakt" }
+] -%}
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if titel and page.url != "/" %}{{ titel }} – {% endif %}{{ forening.namn }}</title>
+  <meta name="description" content="{{ beskrivning or 'Bostadsrättsföreningen Floragården, Föreningsgatan 39 i Malmö.' }}">
+  <link rel="icon" href="/img/logo.png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="sidhuvud">
+    <div class="inner">
+      <a class="logga" href="/"><img src="/img/logo.png" alt="{{ forening.namn }}, grundad {{ forening.grundad }}" width="160" height="117"></a>
+      <nav aria-label="Huvudmeny">
+        <ul>
+          {%- for m in meny %}
+          <li><a href="{{ m.url }}"{% if page.url == m.url %} aria-current="page"{% endif %}>{{ m.titel }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="inner">
+    {{ content | safe }}
+  </main>
+
+  <footer class="sidfot">
+    <div class="inner">
+      <p><strong>{{ forening.fulltNamn }}</strong> · Org.nr {{ forening.orgnr }}</p>
+      <p>{% for rad in forening.postadress %}{% if not loop.first %}{{ rad }}, {% endif %}{% endfor %}<a href="mailto:{{ forening.epost }}">{{ forening.epost }}</a></p>
+      <p class="liten">© {{ forening.namn }} {{ bygge.ar }}</p>
+    </div>
+  </footer>
+</body>
+</html>

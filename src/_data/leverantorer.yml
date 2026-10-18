@@ -1,0 +1,30 @@
+# Föreningens leverantörer. Visas på sidan "Allmän information".
+# TODO styrelsen: bekräfta listan (baserad på årsredovisning 2023).
+- namn: SBC
+  tjanst: Ekonomisk förvaltning
+- namn: Swedbank
+  tjanst: Föreningens bank
+- namn: Länsförsäkringar Skåne
+  tjanst: Fastighetsförsäkring inkl. bostadsrättstillägg
+- namn: E.ON
+  tjanst: Fjärrvärme och el
+- namn: VA Syd
+  tjanst: Vatten och avlopp
+- namn: Telia
+  tjanst: Fiber och bredband (kollektivt)
+- namn: Telavox
+  tjanst: Porttelefon
+- namn: Perfekt Städ
+  tjanst: Trappstädning
+- namn: Svedala Utemiljö AB
+  tjanst: Renhållning och snöröjning av trottoarer
+- namn: Ragn-Sells AB
+  tjanst: Sophämtning och återvinning
+- namn: Ekdahls Åkeri
+  tjanst: Glashantering
+- namn: Bengtssons Tvättmaskinservice
+  tjanst: Tvättmaskiner och torktumlare
+- namn: UMIA
+  tjanst: Frånluftsfläktar, service
+- namn: Simab
+  tjanst: Ventilationsrensning, OVK

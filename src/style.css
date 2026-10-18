@@ -1,0 +1,115 @@
+/* Brf Floragården – en enda stilmall, inga externa typsnitt (inget skickas till Google). */
+:root {
+  --bg: #faf8f4;
+  --yta: #ffffff;
+  --text: #2b2a28;
+  --dampad: #6b665e;
+  --linje: #e4ded3;
+  --accent: #8a4b32;      /* tegel */
+  --accent-mork: #6e3a26;
+  --akut-bg: #fbeee8;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1b1a18;
+    --yta: #252321;
+    --text: #ece8e1;
+    --dampad: #aaa399;
+    --linje: #3a3632;
+    --accent: #e09a7b;
+    --accent-mork: #f0b79d;
+    --akut-bg: #3a2620;
+  }
+  .logga img { filter: invert(1) hue-rotate(180deg); }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 var(--sans);
+}
+
+.inner { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+
+h1, h2, h3 { font-family: var(--serif); font-weight: normal; line-height: 1.25; }
+h1 { font-size: 2.1rem; margin: 2rem 0 1rem; }
+h2 { font-size: 1.4rem; margin: 2rem 0 .6rem; }
+
+a { color: var(--accent); }
+a:hover { color: var(--accent-mork); }
+
+/* Sidhuvud */
+.sidhuvud { background: var(--yta); border-bottom: 1px solid var(--linje); }
+.sidhuvud .inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-block: .6rem; }
+.logga img { display: block; width: 120px; height: auto; }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .2rem 1.2rem; }
+nav a { text-decoration: none; color: var(--text); padding: .3rem 0; border-bottom: 2px solid transparent; }
+nav a:hover, nav a[aria-current="page"] { color: var(--accent); border-bottom-color: var(--accent); }
+
+main { padding-bottom: 3rem; }
+
+/* Startsida */
+.hero { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; margin-top: 1rem; }
+.hero img { width: 100%; height: auto; border-radius: 6px; }
+.ingress { font-size: 1.15rem; color: var(--dampad); }
+.knapp { display: inline-block; background: var(--accent); color: #fff; padding: .55rem 1.1rem; border-radius: 4px; text-decoration: none; }
+.knapp:hover { background: var(--accent-mork); color: #fff; }
+@media (prefers-color-scheme: dark) { .knapp, .knapp:hover { color: #1b1a18; } }
+
+.kort-rad { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.5rem; }
+.kort { display: block; background: var(--yta); border: 1px solid var(--linje); border-radius: 6px; padding: 1rem 1.2rem; text-decoration: none; color: var(--text); }
+.kort:hover { border-color: var(--accent); color: var(--text); }
+.kort h2 { margin: 0 0 .3rem; font-size: 1.2rem; color: var(--accent); }
+.kort p { margin: 0; color: var(--dampad); font-size: .95rem; }
+
+/* Historia */
+.overrubrik { text-transform: uppercase; letter-spacing: .15em; color: var(--dampad); font-size: .85rem; margin: 2rem 0 -1rem; }
+main > p, .text p { max-width: 68ch; }
+
+/* Allmän information */
+.fakta-rutnat { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.fakta { background: var(--yta); border: 1px solid var(--linje); border-radius: 6px; padding: .2rem 1.2rem 1rem; }
+.fakta dl { display: grid; grid-template-columns: max-content 1fr; gap: .35rem 1rem; margin: 0; font-size: .95rem; }
+.fakta dt { color: var(--dampad); }
+.fakta dd { margin: 0; }
+
+.lista-tva { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: .6rem 1.5rem; }
+.lista-tva li { display: flex; flex-direction: column; border-bottom: 1px solid var(--linje); padding-bottom: .4rem; }
+.lista-tva span { color: var(--dampad); font-size: .92rem; }
+
+/* Dokument */
+.dokumentlista { list-style: none; padding: 0; }
+.dokumentlista li { padding: .5rem 0; border-bottom: 1px solid var(--linje); }
+.dokumentlista p { margin: .2rem 0 0; color: var(--dampad); font-size: .92rem; }
+.typ { font-size: .72rem; letter-spacing: .05em; color: var(--dampad); border: 1px solid var(--linje); border-radius: 3px; padding: 0 .3rem; margin-left: .3rem; }
+.lankar { padding-left: 1.2rem; }
+.ritningar { columns: 2 280px; padding-left: 1.2rem; font-size: .95rem; }
+.ritningar li { break-inside: avoid; }
+
+/* Kontakt */
+.kontakt-rutnat { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.kontakt-rutnat h2:first-child { margin-top: 0; }
+.akut { background: var(--akut-bg); border-radius: 6px; padding: 1rem 1.2rem; margin-bottom: 1.5rem; }
+.akut h2 { margin-top: 0; }
+.styrelse { border-collapse: collapse; width: 100%; }
+.styrelse td { padding: .4rem 0; border-bottom: 1px solid var(--linje); }
+.styrelse td:last-child { color: var(--dampad); text-align: right; }
+
+/* Sidfot */
+.sidfot { border-top: 1px solid var(--linje); background: var(--yta); padding: 1.5rem 0; color: var(--dampad); font-size: .9rem; }
+.sidfot p { margin: .2rem 0; }
+.liten { font-size: .85rem; color: var(--dampad); }
+
+@media (max-width: 720px) {
+  h1 { font-size: 1.7rem; }
+  .hero, .kontakt-rutnat { grid-template-columns: 1fr; }
+  .kort-rad { grid-template-columns: 1fr; }
+  .fakta dl { grid-template-columns: 1fr; gap: 0; }
+  .fakta dd { margin-bottom: .5rem; }
+}

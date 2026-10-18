@@ -1,0 +1,46 @@
+# Faktarutorna på sidan "Allmän information".
+# Ekonomiska siffror hämtas ur senaste årsredovisningen (just nu: 2025).
+grupper:
+  - rubrik: Fastigheten
+    rader:
+      - { etikett: Förening, varde: "Brf Floragården (registrerades 2002-06-11)" }
+      - { etikett: Fastighet, varde: Malmö Flora 6 }
+      - { etikett: Byggår, varde: "1898 (ombyggnation av plan 1 till butikslokaler 1903; större ombyggnation av lägenheter 1977)" }
+      - { etikett: Adress, varde: "Föreningsgatan 39A–B, Kommendörsgatan 11, Malmö" }
+      - { etikett: Församling, varde: Malmö Sankt Pauli }
+      - { etikett: Tomtyta, varde: 928 kvm }
+      - { etikett: Bostadsyta, varde: 1 426 kvm }
+      - { etikett: Lokalyta, varde: 408 kvm }
+      - { etikett: Lagerarea, varde: 50 kvm }
+      - { etikett: Antal bostadslägenheter, varde: 15 st }
+      - { etikett: Antal lokaler, varde: 4 st + 1 lagerlokal }
+      - { etikett: Taxeringsvärde, varde: "35 188 000 kr (2025)" }
+      - { etikett: Lån på fastigheten, varde: "9 096 000 kr (2025-12-31)" }
+
+  - rubrik: Teknisk uppbyggnad
+    rader:
+      - { etikett: Antal våningar, varde: "4" }
+      - { etikett: Antal trapphus, varde: "3" }
+      - { etikett: Källare, varde: "Ja – förråd, undercentral, lokal och lager" }
+      - { etikett: Vind, varde: "Ja, isolerad" }
+      - { etikett: Fasader, varde: "Tegelfasader, renoverade 2007. Västra fasaden putsad 2020" }
+      - { etikett: Balkonger, varde: "Ja, mot gården. Byggda 2012/2013" }
+      - { etikett: Yttertak, varde: Papp mot gård och plåt mot gata }
+      - { etikett: Fönster, varde: "Bytta 1977, renoverade 2006, ommålade/omkittade utvändigt 2017" }
+      - { etikett: Portar och passage, varde: "Nya portar, passagesystem och porttelefoni 2021" }
+      - { etikett: Trapphus, varde: "Ny närvarostyrd belysning och ommålning 2020" }
+      - { etikett: Hiss, varde: Nej }
+
+  - rubrik: Installationer
+    rader:
+      - { etikett: Värme, varde: "Fjärrvärme, ny anläggning 2010" }
+      - { etikett: Ventilation, varde: "Mekanisk frånluft installerad 1977, tre fläktar på vinden" }
+      - { etikett: OVK, varde: "Åtgärdad 2017–2018" }
+      - { etikett: Spillvattenrör, varde: "Utbytta 1977, delvis utbytta i källaren 2010 och 2014. Spolade och filmade 2005 och 2014" }
+      - { etikett: Tappvattenrör, varde: "Utbytta 1977, utbytta i källaren 2010" }
+      - { etikett: Rörventiler, varde: "Avstängningsventiler på alla rör 2013 (KV, VV, VVC, VVR, VVT)" }
+      - { etikett: Värmeledningar, varde: "Utbytta 1977 i samband med byte av undercentral" }
+      - { etikett: Elektricitet, varde: "Utbytt 1977, godkänd kapacitet" }
+      - { etikett: Bredband, varde: "Fiber (Telia), installerat 2019" }
+      - { etikett: Gården, varde: "Omgjord 2014 inkl. ny dränering mot gård och gata" }
+      - { etikett: Underhållsplan, varde: "Upprättad 2025, sträcker sig till 2074" }

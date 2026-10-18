@@ -1,0 +1,19 @@
+# Styrelsen. Uppdatera efter varje föreningsstämma eller när någon avgår.
+# Senast uppdaterad: valet på ordinarie stämma 2026-04-13.
+ledamoter:
+  - namn: Isabel Lindeberg Bandstein
+    roll: Ordförande
+  - namn: Marcus Ekström
+    roll: Ledamot
+  - namn: Måns Dahlström
+    roll: Ledamot
+  - namn: Fanny Hall
+    roll: Ledamot
+  - namn: Kristoffer Dehn Rosengren
+    roll: Ledamot
+  - namn: Susanne Tan
+    roll: Suppleant
+  - namn: Jesper Mortensen Blomquist
+    roll: Suppleant
+
+revisor: Valon Makolli, Baker Tilly

@@ -1,0 +1,129 @@
+# Konfiguration för Pages CMS (https://pagescms.org) – ett gratis webbgränssnitt
+# där styrelsen kan redigera hemsidan utan att kunna kod. Se README.md.
+
+media:
+  - name: arsredovisningar
+    label: Årsredovisningar (PDF)
+    input: src/filer/arsredovisningar
+    output: /filer/arsredovisningar
+    extensions: [pdf]
+  - name: filer
+    label: Övriga filer
+    input: src/filer
+    output: /filer
+
+content:
+  - name: forening
+    label: Föreningen (adresser, e-post)
+    type: file
+    path: src/_data/forening.yml
+    fields:
+      - { name: namn, label: Kort namn, type: string }
+      - { name: fulltNamn, label: Fullständigt namn, type: string }
+      - { name: grundad, label: Grundad år, type: number }
+      - { name: orgnr, label: Organisationsnummer, type: string }
+      - { name: epost, label: E-post till styrelsen, type: string }
+      - { name: postadress, label: Postadress (en rad per fält), type: string, list: true }
+      - { name: fakturaadress, label: Fakturaadress (en rad per fält), type: string, list: true }
+      - { name: jourtelefon, label: Jourtelefon vid akut skada, type: string, list: true }
+
+  - name: styrelse
+    label: Styrelse
+    type: file
+    path: src/_data/styrelse.yml
+    fields:
+      - name: ledamoter
+        label: Ledamöter
+        type: object
+        list: true
+        fields:
+          - { name: namn, label: Namn, type: string }
+          - name: roll
+            label: Roll
+            type: select
+            options:
+              values: [Ordförande, Ledamot, Suppleant]
+      - { name: revisor, label: Revisor, type: string }
+
+  - name: dokument
+    label: Dokument (stadgar, länkar)
+    type: file
+    path: src/_data/dokument.yml
+    fields:
+      - name: stadgar
+        label: Stadgar
+        type: object
+        fields:
+          - { name: titel, label: Titel, type: string }
+          - { name: beskrivning, label: Beskrivning, type: string }
+          - { name: fil, label: PDF, type: file, options: { media: filer } }
+      - name: ovriga
+        label: Lagar och förteckningar
+        type: object
+        list: true
+        fields:
+          - { name: titel, label: Titel, type: string }
+          - { name: beskrivning, label: Beskrivning, type: string }
+          - { name: lank, label: Länk eller fil, type: string }
+      - name: bilder
+        label: Historiska bilder (länkar)
+        type: object
+        list: true
+        fields:
+          - { name: titel, label: Titel, type: string }
+          - { name: lank, label: Länk, type: string }
+      - name: kartor
+        label: Kartor
+        type: object
+        list: true
+        fields:
+          - { name: titel, label: Titel, type: string }
+          - { name: lank, label: Fil, type: string }
+
+  - name: fastigheten
+    label: Fakta om fastigheten
+    type: file
+    path: src/_data/fastigheten.yml
+    fields:
+      - name: grupper
+        label: Faktarutor
+        type: object
+        list: true
+        fields:
+          - { name: rubrik, label: Rubrik, type: string }
+          - name: rader
+            label: Rader
+            type: object
+            list: true
+            fields:
+              - { name: etikett, label: Etikett, type: string }
+              - { name: varde, label: Värde, type: string }
+
+  - name: leverantorer
+    label: Leverantörer
+    type: file
+    path: src/_data/leverantorer.yml
+    list: true
+    fields:
+      - { name: namn, label: Företag, type: string }
+      - { name: tjanst, label: Tjänst, type: string }
+
+  - name: information
+    label: Sida – Allmän information (text)
+    type: file
+    path: src/information.md
+    fields:
+      - { name: layout, type: string, hidden: true }
+      - { name: titel, label: Titel, type: string }
+      - { name: permalink, type: string, hidden: true }
+      - { name: body, label: Text, type: rich-text }
+
+  - name: historia
+    label: Sida – Historia
+    type: file
+    path: src/historia.md
+    fields:
+      - { name: layout, type: string, hidden: true }
+      - { name: titel, label: Titel, type: string }
+      - { name: permalink, type: string, hidden: true }
+      - { name: body, label: Text, type: rich-text }

@@ -1,0 +1,33 @@
+---
+layout: bas.njk
+titel: Start
+---
+<section class="hero">
+  <div>
+    <h1>Välkommen till Brf Floragården i Malmö</h1>
+    <p class="ingress">Här hittar du information om vår förening. Vid frågor och funderingar kontaktar du oss enklast via e-post.</p>
+    <p><a class="knapp" href="mailto:{{ forening.epost }}">{{ forening.epost }}</a></p>
+  </div>
+  <img src="/img/fastigheten.png" alt="Fastigheten Flora 6 i hörnet Föreningsgatan och Kommendörsgatan" width="524" height="368">
+</section>
+
+<section class="kort-rad">
+  <a class="kort" href="/dokument/">
+    <h2>Dokument</h2>
+    <p>Stadgar, årsredovisningar och ritningar.</p>
+  </a>
+  <a class="kort" href="/information/">
+    <h2>Allmän information</h2>
+    <p>Fastigheten, tvättstuga, sophantering och leverantörer.</p>
+  </a>
+  <a class="kort" href="/kontakt/">
+    <h2>Kontakt</h2>
+    <p>Styrelsen, fakturaadress och vid akut skada.</p>
+  </a>
+</section>
+
+<section>
+  <h2>Hitta hit</h2>
+  <p>{% for rad in forening.postadress %}{{ rad }}<br>{% endfor %}
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=F%C3%B6reningsgatan%2039A%2C%20Malm%C3%B6">Visa på karta</a></p>
+</section>

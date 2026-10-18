@@ -1,0 +1,14 @@
+{
+  "name": "brffloragarden-se",
+  "private": true,
+  "type": "module",
+  "description": "Hemsidan för Brf Floragården (brffloragarden.se)",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.2",
+    "js-yaml": "4.1.0"
+  }
+}

@@ -1,0 +1,40 @@
+---
+layout: bas.njk
+titel: Kontakt
+permalink: /kontakt/
+---
+<h1>Kontakt</h1>
+
+<div class="kontakt-rutnat">
+  <section>
+    <h2>E-post</h2>
+    <p><a href="mailto:{{ forening.epost }}">{{ forening.epost }}</a></p>
+
+    <h2>Postadress</h2>
+    <p>{% for rad in forening.postadress %}{{ rad }}<br>{% endfor %}</p>
+
+    <h2>Fakturaadress</h2>
+    <p>{% for rad in forening.fakturaadress %}{{ rad }}<br>{% endfor %}</p>
+
+    <h2>Organisationsnummer</h2>
+    <p>{{ forening.orgnr }}</p>
+  </section>
+
+  <section>
+    <div class="akut">
+      <h2>Vid akut skada</h2>
+      <p>Kontakta styrelsen i första hand och Länsförsäkringars jourtelefon i andra hand.</p>
+      <p>{% for tel in forening.jourtelefon %}<a href="tel:{{ tel | replace(' ', '') | replace('-', '') }}">{{ tel }}</a><br>{% endfor %}</p>
+    </div>
+
+    <h2>Styrelsen</h2>
+    <table class="styrelse">
+      <tbody>
+        {%- for p in styrelse.ledamoter %}
+        <tr><td>{{ p.namn }}</td><td>{{ p.roll }}</td></tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+    <p class="liten">Revisor: {{ styrelse.revisor }}</p>
+  </section>
+</div>
