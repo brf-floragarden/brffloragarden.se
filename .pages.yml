@@ -124,6 +124,17 @@ content:
     path: src/historia.md
     fields:
       - { name: layout, type: string, hidden: true }
-      - { name: titel, label: Titel, type: string }
+      - { name: titel, type: string, hidden: true }
       - { name: permalink, type: string, hidden: true }
-      - { name: body, label: Text, type: rich-text }
+      - { name: rubrik, label: Rubrik, type: string }
+      - { name: body, label: Inledande text om Rörsjöstaden, type: rich-text }
+      - { name: tidslinjeRubrik, label: Rubrik för tidslinjen, type: string }
+      - name: handelser
+        label: Tidslinje – en rad per händelse, i årtalsordning
+        type: object
+        list: true
+        fields:
+          - { name: ar, label: År, type: string }
+          - name: text
+            label: "Vad hände (fortsätter meningen efter årtalet, t.ex. ”byggs balkonger mot innergården.”)"
+            type: text

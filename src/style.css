@@ -71,6 +71,10 @@ main { padding-bottom: 3rem; }
 /* Historia */
 .overrubrik { text-transform: uppercase; letter-spacing: .15em; color: var(--dampad); font-size: .85rem; margin: 2rem 0 -1rem; }
 main > p, .text p { max-width: 68ch; }
+.tidslinje { list-style: none; padding: 0; max-width: 68ch; }
+.tidslinje li { padding: .6rem 0 .6rem 1.2rem; border-left: 2px solid var(--linje); position: relative; }
+.tidslinje li::before { content: ""; position: absolute; left: -6px; top: 1.05rem; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
+.tidslinje strong { color: var(--accent); font-family: var(--serif); font-size: 1.05rem; }
 
 /* Allmän information */
 .fakta-rutnat { display: grid; gap: 1.25rem; }

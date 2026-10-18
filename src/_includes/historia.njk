@@ -1,0 +1,16 @@
+---
+layout: bas.njk
+---
+<p class="overrubrik">Sedan 1897</p>
+<h1>{{ rubrik }}</h1>
+
+<div class="text">
+{{ content | safe }}
+</div>
+
+<h2>{{ tidslinjeRubrik }}</h2>
+<ol class="tidslinje">
+  {%- for h in handelser %}
+  <li><strong>{{ h.ar }}</strong> {{ h.text }}</li>
+  {%- endfor %}
+</ol>
