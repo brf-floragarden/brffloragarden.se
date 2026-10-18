@@ -1,10 +1,7 @@
-# Övriga dokument och länkar på sidan "Dokument".
-# Årsredovisningar och ritningar listas automatiskt ur sina mappar (se README).
-
 stadgar:
   titel: Föreningens stadgar
   beskrivning: Antagna vid extra stämma 2025-12-11 och fastställda vid ordinarie stämma 2026-04-13.
-  fil: filer/stadgar-2026.pdf
+  fil: /filer/stadgar-2026.pdf
 
 ovriga:
   - titel: Bostadsrättslagen
@@ -12,7 +9,7 @@ ovriga:
     lank: https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/bostadsrattslag-1991614_sfs-1991-614/
   - titel: Lägenhetsförteckning
     beskrivning: Föreningens och Skatteverkets lägenhetsnummer.
-    lank: filer/Lägenhetsförteckning.pdf
+    fil: /filer/Lägenhetsförteckning.pdf
 
 bilder:
   - titel: Föreningsgatan 1913
@@ -26,6 +23,6 @@ bilder:
 
 kartor:
   - titel: Malmö 1805
-    lank: filer/kartor/Malmö 1805 Karta.pdf
+    fil: /filer/kartor/Malmö 1805 Karta.pdf
   - titel: Malmö 1853
-    lank: filer/kartor/Malmö 1853 Karta.pdf
+    fil: /filer/kartor/Malmö 1853 Karta.pdf

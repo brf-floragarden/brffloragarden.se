@@ -8,7 +8,7 @@ permalink: /dokument/
 <section>
   <h2>Stadgar</h2>
   <ul class="dokumentlista">
-    <li><a href="/{{ dokument.stadgar.fil | fileUrl }}">{{ dokument.stadgar.titel }}</a> <span class="typ">PDF</span>
+    <li><a href="{{ dokument.stadgar.fil | fileUrl }}">{{ dokument.stadgar.titel }}</a> <span class="typ">PDF</span>
       <p>{{ dokument.stadgar.beskrivning }}</p></li>
   </ul>
 </section>
@@ -17,7 +17,7 @@ permalink: /dokument/
   <h2>Årsredovisningar</h2>
   <ul class="dokumentlista">
     {%- for r in arkiv.arsredovisningar %}
-    <li><a href="/filer/arsredovisningar/{{ r.fil | fileUrl }}">Årsredovisning {{ r.ar }}</a> <span class="typ">PDF</span></li>
+    <li><a href="{{ ("filer/arsredovisningar/" + r.fil) | fileUrl }}">Årsredovisning {{ r.ar }}</a> <span class="typ">PDF</span></li>
     {%- endfor %}
   </ul>
 </section>
@@ -26,8 +26,8 @@ permalink: /dokument/
   <h2>Lagar och förteckningar</h2>
   <ul class="dokumentlista">
     {%- for d in dokument.ovriga %}
-    <li><a href="{% if d.lank.startsWith('http') %}{{ d.lank }}{% else %}/{{ d.lank | fileUrl }}{% endif %}">{{ d.titel }}</a>
-      <p>{{ d.beskrivning }}</p></li>
+    <li><a href="{{ d | dokumentUrl }}">{{ d.titel }}</a>
+      {% if d.beskrivning %}<p>{{ d.beskrivning }}</p>{% endif %}</li>
     {%- endfor %}
   </ul>
 </section>
@@ -36,10 +36,10 @@ permalink: /dokument/
   <h2>Historiska bilder och kartor</h2>
   <ul class="lankar">
     {%- for b in dokument.bilder %}
-    <li><a href="{{ b.lank }}">{{ b.titel }}</a></li>
+    <li><a href="{{ b | dokumentUrl }}">{{ b.titel }}</a></li>
     {%- endfor %}
     {%- for k in dokument.kartor %}
-    <li><a href="/{{ k.lank | fileUrl }}">{{ k.titel }}</a> <span class="typ">karta</span></li>
+    <li><a href="{{ k | dokumentUrl }}">{{ k.titel }}</a> <span class="typ">karta</span></li>
     {%- endfor %}
   </ul>
 </section>
@@ -49,7 +49,7 @@ permalink: /dokument/
   <p>Ritningar ur Stadsbyggnadskontorets arkiv, 1897–2011.</p>
   <ul class="ritningar">
     {%- for r in arkiv.ritningar %}
-    <li><a href="/filer/ritningar/{{ r.fil | fileUrl }}">{{ r.titel }}</a></li>
+    <li><a href="{{ ("filer/ritningar/" + r.fil) | fileUrl }}">{{ r.titel }}</a></li>
     {%- endfor %}
   </ul>
 </section>

@@ -8,9 +8,15 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/style.css");
 
-  // Länka filer med mellanslag och å/ä/ö säkert
+  // Länka filer med mellanslag och å/ä/ö säkert. Tar både "filer/x.pdf" och
+  // "/filer/x.pdf" (Pages CMS sparar med inledande snedstreck).
   eleventyConfig.addFilter("fileUrl", (path) =>
-    path.split("/").map(encodeURIComponent).join("/")
+    "/" + path.replace(/^\/+/, "").split("/").map(encodeURIComponent).join("/")
+  );
+
+  // Ett dokument har antingen en uppladdad fil eller en extern länk
+  eleventyConfig.addFilter("dokumentUrl", (d) =>
+    d.fil ? eleventyConfig.getFilter("fileUrl")(d.fil) : d.lank
   );
 
   return {

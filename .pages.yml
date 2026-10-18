@@ -35,7 +35,7 @@ content:
       - name: ledamoter
         label: Ledamöter
         type: object
-        list: true
+        list: { collapsible: { collapsed: true, summary: "{fields.namn} – {fields.roll}" } }
         fields:
           - { name: namn, label: Namn, type: string }
           - name: roll
@@ -56,29 +56,49 @@ content:
         fields:
           - { name: titel, label: Titel, type: string }
           - { name: beskrivning, label: Beskrivning, type: string }
-          - { name: fil, label: PDF, type: file, options: { media: filer } }
+          - name: fil
+            label: PDF
+            type: file
+            description: Klicka för att välja eller ladda upp stadgarna som PDF.
+            options: { media: filer, extensions: [pdf] }
       - name: ovriga
         label: Lagar och förteckningar
+        description: Varje rad är antingen en uppladdad fil ELLER en länk till en annan webbplats – fyll i det ena.
         type: object
-        list: true
+        list: { collapsible: { collapsed: true, summary: "{fields.titel}" } }
         fields:
           - { name: titel, label: Titel, type: string }
-          - { name: beskrivning, label: Beskrivning, type: string }
-          - { name: lank, label: Länk eller fil, type: string }
+          - { name: beskrivning, label: Beskrivning (valfri), type: string }
+          - name: fil
+            label: Fil
+            type: file
+            description: Välj eller ladda upp en fil (PDF, bild).
+            options: { media: filer }
+          - name: lank
+            label: Länk till annan webbplats
+            type: string
+            description: Hela adressen, t.ex. https://www.riksdagen.se/… Lämna tomt om du valt en fil ovan.
       - name: bilder
-        label: Historiska bilder (länkar)
+        label: Historiska bilder (länkar till andra webbplatser)
         type: object
-        list: true
+        list: { collapsible: { collapsed: true, summary: "{fields.titel}" } }
         fields:
           - { name: titel, label: Titel, type: string }
-          - { name: lank, label: Länk, type: string }
+          - name: lank
+            label: Länk
+            type: string
+            description: Hela adressen till bilden, t.ex. https://bilderisyd.se/…
       - name: kartor
         label: Kartor
         type: object
-        list: true
+        list: { collapsible: { collapsed: true, summary: "{fields.titel}" } }
         fields:
           - { name: titel, label: Titel, type: string }
-          - { name: lank, label: Fil, type: string }
+          - name: fil
+            label: Fil
+            type: file
+            description: Välj eller ladda upp kartan (PDF eller bild).
+            options: { media: filer }
 
   - name: fastigheten
     label: Fakta om fastigheten
@@ -88,13 +108,13 @@ content:
       - name: grupper
         label: Faktarutor
         type: object
-        list: true
+        list: { collapsible: { collapsed: true, summary: "{fields.rubrik}" } }
         fields:
           - { name: rubrik, label: Rubrik, type: string }
           - name: rader
             label: Rader
             type: object
-            list: true
+            list: { collapsible: { collapsed: false, summary: "{fields.etikett}" } }
             fields:
               - { name: etikett, label: Etikett, type: string }
               - { name: varde, label: Värde, type: string }
@@ -132,7 +152,7 @@ content:
       - name: handelser
         label: Tidslinje – en rad per händelse, i årtalsordning
         type: object
-        list: true
+        list: { collapsible: { collapsed: true, summary: "{fields.ar}" } }
         fields:
           - { name: ar, label: År, type: string }
           - name: text
