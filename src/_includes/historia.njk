@@ -1,24 +1,19 @@
 ---
 layout: bas.njk
 ---
-{% if omslag %}
-<figure class="omslag-figur">
-  <header class="omslag">
-    <img src="{{ omslag | fileUrl }}" alt="{{ omslagText }}">
-    <div>
-      <p class="overrubrik">Sedan 1897</p>
-      <h1>{{ rubrik }}</h1>
-    </div>
-  </header>
-  {% if omslagText %}<figcaption>{{ omslagText }}</figcaption>{% endif %}
-</figure>
-{% else %}
 <p class="overrubrik">Sedan 1897</p>
 <h1>{{ rubrik }}</h1>
-{% endif %}
 
-<div class="text">
-{{ content | safe }}
+<div class="intro{% if bild %} med-bild{% endif %}">
+  <div class="text">
+  {{ content | safe }}
+  </div>
+  {% if bild %}
+  <figure>
+    <a href="{{ bild | fileUrl }}"><img src="{{ bild | fileUrl }}" alt="{{ bildtext }}"></a>
+    {% if bildtext %}<figcaption>{{ bildtext }}</figcaption>{% endif %}
+  </figure>
+  {% endif %}
 </div>
 
 <h2>{{ tidslinjeRubrik }}</h2>
